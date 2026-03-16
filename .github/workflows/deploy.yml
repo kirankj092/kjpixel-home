@@ -16,7 +16,7 @@ jobs:
         with:
           server: ${{ secrets.ftp.kjpixel.com}}
           username: ${{ secrets.u323182147 }}
-          password: ${{ secrets.Chennabasappa@8090 }}
+          password: ${{ secrets. }}
           local-dir: ./
           server-dir: /public_html/
           exclude: |
