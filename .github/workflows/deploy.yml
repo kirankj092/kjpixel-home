@@ -1,0 +1,25 @@
+name: Deploy Homepage to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.ftp.kjpixel.com}}
+          username: ${{ secrets.u323182147 }}
+          password: ${{ secrets.Chennabasappa@8090 }}
+          local-dir: ./
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
